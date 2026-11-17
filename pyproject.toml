@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alternance-copilot"
+version = "0.1.0"
+description = "Assistant for preparing work-study applications"
+dependencies = [
+    "pydantic>=2,<3",
+    "langchain-ollama",
+    "langgraph",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
